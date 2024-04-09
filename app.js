@@ -1,11 +1,15 @@
-const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+// classList - shows/gets all classes
+// contains - checks classList for specific class
+// add - add class
+// remove - remove class
+// toggle - toggles class
 
-const btn = document.getElementById("btn");
-const color = document.querySelector(".color");
+const links = document.querySelector(".links");
+const navToggle = document.querySelector(".nav-toggle");
 
-btn.addEventListener("click", () => {
-  const index = Math.floor(Math.random() * colors.length);
-  color.textContent = colors[index];
-
-  document.body.style.backgroundColor = colors[index];
+navToggle.addEventListener("click", () => {
+  // links.classList.contains("show-links")
+  //   ? links.classList.remove("show-links")
+  //   : links.classList.add("show-links");
+  links.classList.toggle("show-links");
 });
